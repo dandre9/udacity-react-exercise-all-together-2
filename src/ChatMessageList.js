@@ -7,7 +7,7 @@ const ChatMessageList = props => {
   return (
     <ul className="message-list">
       {messages.map(message => (
-        <ChatMessage message={message} user={user} />
+        <ChatMessage key={message.key} message={message} user={user} />
       ))}
     </ul>
   );

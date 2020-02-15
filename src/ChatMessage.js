@@ -5,7 +5,6 @@ const ChatMessage = props => {
 
   return (
     <li
-      key={message.key}
       className={
         message.username === user ? "message sender" : "message recipient"
       }

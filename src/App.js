@@ -20,6 +20,12 @@ class App extends Component {
     ]
   };
 
+  spreadMessage = message => {
+    this.setState(prevState => ({
+      messages: [...prevState.messages, message]
+    }));
+  };
+
   render() {
     const { messages } = this.state;
 
@@ -31,7 +37,12 @@ class App extends Component {
         </header>
         <div className="container">
           {users.map(user => (
-            <Chat user={user.username} messages={messages} />
+            <Chat
+              key={user.username}
+              user={user.username}
+              messages={messages}
+              spreadMessage={this.spreadMessage}
+            />
           ))}
         </div>
       </div>
