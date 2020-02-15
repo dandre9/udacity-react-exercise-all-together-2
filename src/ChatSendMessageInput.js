@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ChatSendMessageInput extends Component {
   state = {
@@ -51,5 +52,9 @@ class ChatSendMessageInput extends Component {
     );
   }
 }
+
+ChatSendMessageInput.propTypes = {
+  sendMessage: PropTypes.func.isRequired
+};
 
 export default ChatSendMessageInput;

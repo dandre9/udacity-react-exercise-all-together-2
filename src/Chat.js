@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ChatMessageList from "./ChatMessageList";
 import ChatSendMessageInput from "./ChatSendMessageInput";
+import PropTypes from "prop-types";
 
 class Chat extends Component {
   sendMessage = message => {
@@ -29,5 +30,11 @@ class Chat extends Component {
     );
   }
 }
+
+Chat.propTypes = {
+  user: PropTypes.string.isRequired,
+  messages: PropTypes.array.isRequired,
+  spreadMessage: PropTypes.func.isRequired
+};
 
 export default Chat;

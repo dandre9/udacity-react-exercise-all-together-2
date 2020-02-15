@@ -1,5 +1,6 @@
 import React from "react";
 import ChatMessage from "./ChatMessage";
+import PropTypes from "prop-types";
 
 const ChatMessageList = props => {
   const { user, messages } = props;
@@ -11,6 +12,11 @@ const ChatMessageList = props => {
       ))}
     </ul>
   );
+};
+
+ChatMessageList.propTypes = {
+  messages: PropTypes.array.isRequired,
+  user: PropTypes.string.isRequired
 };
 
 export default ChatMessageList;

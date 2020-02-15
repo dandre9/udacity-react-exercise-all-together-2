@@ -13,11 +13,7 @@ const users = [{ username: "Amy" }, { username: "John" }];
 
 class App extends Component {
   state = {
-    messages: [
-      { username: "Amy", text: "Hi, Jon!", key: 0 },
-      { username: "Amy", text: "How are you?", key: 1 },
-      { username: "John", text: "Hi, Amy! Good, you?", key: 2 }
-    ]
+    messages: []
   };
 
   spreadMessage = message => {
