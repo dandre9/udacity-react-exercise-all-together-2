@@ -16,7 +16,7 @@ const ChatMessage = props => {
 };
 
 ChatMessage.propTypes = {
-  messages: PropTypes.array.isRequired,
+  message: PropTypes.object.isRequired,
   user: PropTypes.string.isRequired
 };
 
